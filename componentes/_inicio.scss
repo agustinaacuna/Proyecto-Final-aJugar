@@ -1,0 +1,41 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/FondoSitio1.jpg);
+    font-family: $textos;
+    text-align: center;
+    nav{
+        color: nth($colores, 5 )
+    }
+    main{
+        font-family: $titulos;
+        color: nth($colores, 3 );
+        margin: 2px;
+        div{
+            ul{
+                display: grid;
+                margin: auto;
+                padding: 15px;
+                width: 33.33%;
+                list-style-type: none;
+                background-color: white;
+                border-radius: 10%;
+                li{
+                    font-family: $textos;
+                    h2{
+                        font-family: $titulos;
+                    }
+                }
+            }
+
+        }
+    }
+    footer{
+        p{
+            color: nth($colores, 5 );
+            height: 90px;
+            width: 100%;
+        }
+
+    }
+}
