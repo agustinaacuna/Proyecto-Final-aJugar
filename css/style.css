@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/FondoSitio1.jpg);
+  background-color: #dec0e1;
   font-family: "Gudea", sans-serif;
   text-align: center;
 }
@@ -13,11 +13,21 @@ body main {
   color: #ee6c4d;
   margin: 2px;
 }
-body main div ul {
+body main div {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-width: 200px;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+body main div ul {
   margin: auto;
   padding: 15px;
-  width: 33.33%;
   list-style-type: none;
   background-color: white;
   border-radius: 10%;
@@ -32,6 +42,78 @@ body footer p {
   color: #227c9d;
   height: 90px;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #dec0e1;
+  font-family: "Gudea", sans-serif;
+  text-align: center;
+}
+body main .infoHistoria {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  gap: 20px;
+}
+body main .infoHistoria .historia {
+  width: 40%;
+}
+body main .infoHistoria .imagen {
+  width: 60%;
+}
+body main section {
+  font-family: "Ultra", serif;
+  color: #227c9d;
+}
+body main section p {
+  font-family: "Gudea", sans-serif;
+}
+body main li {
+  font-family: "Gudea", sans-serif;
+}
+
+.galeria {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 80%;
+}
+.galeria .card {
+  font-family: "Gudea", sans-serif;
+  color: #227c9d;
+}
+
+.productos {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 50%;
+}
+.productos .card {
+  font-family: "Gudea", sans-serif;
+  color: #17c3b2;
+}
+.productos .card .btn-primary {
+  background-color: #17c3b2;
+  border: 0;
+}
+
+.galeria, .productos {
+  display: grid;
+  column-gap: normal;
+  row-gap: 20px;
+  font-family: "Gudea", sans-serif;
+  border-radius: 10px;
+  min-width: 200px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
 }
 
 /*# sourceMappingURL=style.css.map */

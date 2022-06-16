@@ -1,9 +1,10 @@
 body{
-    height: 100vh;
-    width: 100vw;
-    background-image: url(../img/FondoSitio1.jpg);
+    height: map-get($body , alto );
+    width: map-get($body , ancho );
+    background-color: nth($colores, 1 );
+    // background-image: url(../img/FondoSitio1.jpg);
     font-family: $textos;
-    text-align: center;
+    text-align: map-get($body , texto );
     nav{
         color: nth($colores, 5 )
     }
@@ -12,11 +13,19 @@ body{
         color: nth($colores, 3 );
         margin: 2px;
         div{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            min-width: 200px;
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center center;
             ul{
-                display: grid;
                 margin: auto;
                 padding: 15px;
-                width: 33.33%;
                 list-style-type: none;
                 background-color: white;
                 border-radius: 10%;
@@ -35,6 +44,7 @@ body{
             color: nth($colores, 5 );
             height: 90px;
             width: 100%;
+            @include pieDePagina()
         }
 
     }

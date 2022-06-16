@@ -1,0 +1,10 @@
+.galeria{
+    @extend %cards;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 80%;
+    .card{
+        font-family: $textos;
+        color: nth($colores, 5 );
+    }
+}

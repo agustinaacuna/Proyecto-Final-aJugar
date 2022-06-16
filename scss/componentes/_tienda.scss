@@ -1,0 +1,14 @@
+.productos{
+   @extend %cards;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 50%;
+    .card{
+        font-family: $textos;
+        color: nth($colores, 4 );
+        .btn-primary{
+        background-color: nth($colores, 4 );
+        border: 0;
+        }
+    }
+}

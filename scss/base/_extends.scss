@@ -1,0 +1,14 @@
+%cards{
+    display:grid;
+    column-gap: normal;
+    row-gap: 20px;
+    font-family: $textos;
+    border-radius: 10px;
+    min-width: 200px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+}

@@ -1,0 +1,69 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/FondoSitio1.jpg);
+  font-family: "Gudea", sans-serif;
+  text-align: center;
+}
+body nav {
+  color: #227c9d;
+}
+body main {
+  font-family: "Ultra", serif;
+  color: #ee6c4d;
+  margin: 2px;
+}
+body main div ul {
+  display: grid;
+  margin: auto;
+  padding: 15px;
+  width: 33.33%;
+  list-style-type: none;
+  background-color: white;
+  border-radius: 10%;
+}
+body main div ul li {
+  font-family: "Gudea", sans-serif;
+}
+body main div ul li h2 {
+  font-family: "Ultra", serif;
+}
+body footer p {
+  color: #227c9d;
+  height: 90px;
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #dec0e1;
+  font-family: "Gudea", sans-serif;
+  text-align: center;
+}
+
+.contenedor-galeria {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  gap: 2px;
+}
+.contenedor-galeria .contenedor-galeria-fotos {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contenedor-galeria .contenedor-galeria-fotos .card {
+  border-radius: 10px;
+  min-width: 200px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  width: 33.33%;
+}
+
+/*# sourceMappingURL=tyle.cass.map */

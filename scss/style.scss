@@ -1,3 +1,12 @@
-@import"../base/variables";
-@import"../base/listas";
-@import"../componentes/inicio";
+
+@import"./base/mixin";
+@import"./base/maps";
+@import"./base/variables";
+@import"./base/listas";
+@import"./componentes/inicio";
+@import"./componentes/info";
+@import"./componentes/galeria";
+@import"./componentes/sponsors";
+@import"./componentes/tienda";
+@import"./base/extends";
+
