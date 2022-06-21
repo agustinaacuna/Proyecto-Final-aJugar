@@ -1,32 +1,67 @@
-body{
-    height: 100vh;
-    width: 100vw;
-    background-color: nth($colores, 1 );
-    font-family: $textos;
-    text-align: center;
-    main{
-        .infoHistoria{
+.infoHistoria{
             width: 80%;
             margin: auto;
             padding: 40px 0;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-template-areas: 
+            "historia ads"
+            "historia ads"
+            "medidas medidas";
             gap: 20px;
-            .historia{
-                width: 40%;
-            }
-            .imagen{
-                width: 60%;
-            }
-        }
-        section{
-            font-family: $titulos;
+}
+.historia{
+    grid-area: historia;
+    margin: auto;
+    background-color: #dec0e1b2;
+    border-radius: 20px;
+    p{
+        font-family: $textos;
+    }
+}
+ aside{
+    grid-area: ads;
+    width: 60%;
+    .imagen{
+        width: 100% ;
+        height: auto;
+    }
+}
+.medidas{
+    grid-area: medidas;
+            font-family: $textos;
             color: nth($colores, 5 );
+            background-color: #dec0e1b2;
+            border-radius: 20px;
+            h1{
+                font-family: $titulos;
+            }
             p{
                 font-family: $textos;
             }
+}
+ li{
+    font-family: $textos;
+    list-style: none;
+ }
+@media screen and (max-width:1024px) {
+        .infoHistoria{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-template-areas: 
+            "historia"
+            "ads"
+            "medidas";
         }
-        li{
-            font-family: $textos;
+        aside{
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            .imagen{
+                width: 50%;
+            }
+
         }
-    }
+
 }

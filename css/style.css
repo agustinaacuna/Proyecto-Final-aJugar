@@ -2,24 +2,34 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #dec0e1;
+  background-image: url(/img/FondoSitioNuevo.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
   font-family: "Gudea", sans-serif;
   text-align: center;
 }
 body nav {
   color: #227c9d;
+  background-color: rgba(222, 192, 225, 0.6980392157);
+  border: 10px;
 }
 body main {
   font-family: "Ultra", serif;
   color: #ee6c4d;
-  margin: 2px;
+  margin: 20px;
+  padding: auto;
+  width: auto;
+  height: max-content;
 }
 body main div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  min-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: normal;
+  align-items: flex-start;
   width: 80%;
   margin: auto;
-  padding: 20px;
+  padding: 5px;
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -28,12 +38,10 @@ body main div {
 body main div ul {
   margin: auto;
   padding: 15px;
-  list-style-type: none;
-  background-color: white;
-  border-radius: 10%;
 }
 body main div ul li {
   font-family: "Gudea", sans-serif;
+  list-style: none;
 }
 body main div ul li h2 {
   font-family: "Ultra", serif;
@@ -41,42 +49,80 @@ body main div ul li h2 {
 body footer p {
   color: #227c9d;
   height: 90px;
-  width: 100%;
+  width: auto;
   justify-content: center;
   align-items: center;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-  background-color: #dec0e1;
-  font-family: "Gudea", sans-serif;
-  text-align: center;
+@media screen and (max-width: 1024px) {
+  div {
+    margin: none;
+  }
 }
-body main .infoHistoria {
+.infoHistoria {
   width: 80%;
   margin: auto;
   padding: 40px 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "historia ads" "historia ads" "medidas medidas";
   gap: 20px;
 }
-body main .infoHistoria .historia {
-  width: 40%;
+
+.historia {
+  grid-area: historia;
+  margin: auto;
+  background-color: rgba(222, 192, 225, 0.6980392157);
+  border-radius: 20px;
 }
-body main .infoHistoria .imagen {
-  width: 60%;
-}
-body main section {
-  font-family: "Ultra", serif;
-  color: #227c9d;
-}
-body main section p {
-  font-family: "Gudea", sans-serif;
-}
-body main li {
+.historia p {
   font-family: "Gudea", sans-serif;
 }
 
+aside {
+  grid-area: ads;
+  width: 60%;
+}
+aside .imagen {
+  width: 100%;
+  height: auto;
+}
+
+.medidas {
+  grid-area: medidas;
+  font-family: "Gudea", sans-serif;
+  color: #227c9d;
+  background-color: rgba(222, 192, 225, 0.6980392157);
+  border-radius: 20px;
+}
+.medidas h1 {
+  font-family: "Ultra", serif;
+}
+.medidas p {
+  font-family: "Gudea", sans-serif;
+}
+
+li {
+  font-family: "Gudea", sans-serif;
+  list-style: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .infoHistoria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "historia" "ads" "medidas";
+  }
+  aside {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  aside .imagen {
+    width: 50%;
+  }
+}
 .galeria {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -87,6 +133,41 @@ body main li {
   color: #227c9d;
 }
 
+@media screen and (max-width: 1024px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+}
+.sponsors {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: auto;
+}
+.sponsors div {
+  width: 33.33%;
+}
+
+@media screen and (max-width: 1024px) {
+  .sponsors {
+    flex-direction: column;
+    width: 100%;
+  }
+  img {
+    width: 80%;
+  }
+}
 .productos {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -101,12 +182,18 @@ body main li {
   border: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .productos {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+}
 .galeria, .productos {
   display: grid;
   column-gap: normal;
   row-gap: 20px;
   font-family: "Gudea", sans-serif;
-  border-radius: 10px;
+  border-radius: 20px;
   min-width: 200px;
   margin: auto;
   padding: 20px;

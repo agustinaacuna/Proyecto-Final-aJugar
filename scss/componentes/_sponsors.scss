@@ -1,0 +1,22 @@
+.sponsors{
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: auto;
+    div{
+        width: 33.33%;
+    }
+}
+@media screen and (max-width:1024px) {
+    .sponsors{
+        flex-direction: column;
+        width: 100%;
+    }
+    img{
+        width: 80%;
+    }
+}

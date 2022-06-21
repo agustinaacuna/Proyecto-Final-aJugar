@@ -2,23 +2,32 @@ body{
     height: map-get($body , alto );
     width: map-get($body , ancho );
     background-color: nth($colores, 1 );
-    // background-image: url(../img/FondoSitio1.jpg);
+    background-image: url(/img/FondoSitioNuevo.png);
+    background-repeat: repeat;
+    background-position:center;
+    background-size: cover;
     font-family: $textos;
     text-align: map-get($body , texto );
     nav{
-        color: nth($colores, 5 )
+        color: nth($colores, 5 );
+        background-color:#dec0e1b2 ;
+        border: 10px;
     }
     main{
         font-family: $titulos;
         color: nth($colores, 3 );
-        margin: 2px;
+        margin: 20px;
+        padding: auto;
+        width:auto;
+        height: max-content;
         div{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            min-width: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: normal;
+            align-items: flex-start;
             width: 80%;
             margin: auto;
-            padding: 20px;
+            padding: 5px;
             position: relative;
             overflow: hidden;
             background-size: cover;
@@ -26,11 +35,9 @@ body{
             ul{
                 margin: auto;
                 padding: 15px;
-                list-style-type: none;
-                background-color: white;
-                border-radius: 10%;
                 li{
                     font-family: $textos;
+                    list-style: none;
                     h2{
                         font-family: $titulos;
                     }
@@ -43,9 +50,17 @@ body{
         p{
             color: nth($colores, 5 );
             height: 90px;
-            width: 100%;
+            width: auto;
             @include pieDePagina()
         }
 
     }
+}
+@media screen and (max-width:1024px) {
+    div{
+        margin: none;
+    }
+}
+@media screen and (max-width: 768px) {
+
 }

@@ -8,3 +8,15 @@
         color: nth($colores, 5 );
     }
 }
+@media screen and (max-width: 1024px){
+    .galeria{
+        grid-template-columns: repeat(2,1fr);
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px){
+    .galeria{
+        grid-template-columns: repeat(1,1fr);
+        width: 80%;
+    }
+}
