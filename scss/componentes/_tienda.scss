@@ -1,8 +1,7 @@
 .productos{
    @extend %cards;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 50%;
+    width: 80%;
     .card{
         font-family: $textos;
         color: nth($colores, 4 );
@@ -12,9 +11,14 @@
         }
     }
 }
+@media screen and (max-width: 1024px){
+    .productos{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 @media screen and (max-width: 768px){
     .productos{
         grid-template-columns: repeat(1,1fr);
-        width: 80%;
+        width: 90%;
     }
 }

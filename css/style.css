@@ -1,6 +1,4 @@
 body {
-  height: 100vh;
-  width: 100vw;
   background-color: #dec0e1;
   background-image: url(/img/FondoSitioNuevo.png);
   background-repeat: repeat;
@@ -65,8 +63,7 @@ body footer p {
   padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "historia ads" "historia ads" "medidas medidas";
+  grid-template-areas: "historia img" "historia img" "medidas medidas";
   gap: 20px;
 }
 
@@ -80,11 +77,12 @@ body footer p {
   font-family: "Gudea", sans-serif;
 }
 
-aside {
-  grid-area: ads;
-  width: 60%;
+div {
+  width: 100%;
+  margin: 0 auto;
+  grid-area: img;
 }
-aside .imagen {
+div .imgen {
   width: 100%;
   height: auto;
 }
@@ -111,21 +109,18 @@ li {
 @media screen and (max-width: 1024px) {
   .infoHistoria {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "historia" "ads" "medidas";
+    grid-template-areas: "historia" "img" "medidas";
   }
-  aside {
-    width: 100%;
+  div {
     justify-content: center;
     align-items: center;
   }
-  aside .imagen {
-    width: 50%;
+  div .imagen {
+    width: 80%;
   }
 }
 .galeria {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   width: 80%;
 }
 .galeria .card {
@@ -147,31 +142,27 @@ li {
 }
 .sponsors {
   display: flex;
-  width: 50%;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 50%;
   height: auto;
   margin: auto;
-}
-.sponsors div {
-  width: 33.33%;
 }
 
 @media screen and (max-width: 1024px) {
   .sponsors {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
   }
-  img {
+  .sponsors img {
     width: 80%;
   }
 }
 .productos {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  width: 50%;
+  width: 80%;
 }
 .productos .card {
   font-family: "Gudea", sans-serif;
@@ -182,10 +173,15 @@ li {
   border: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 768px) {
   .productos {
     grid-template-columns: repeat(1, 1fr);
-    width: 80%;
+    width: 90%;
   }
 }
 .galeria, .productos {

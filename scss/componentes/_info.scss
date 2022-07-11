@@ -4,10 +4,9 @@
             padding: 40px 0;
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(3,1fr);
             grid-template-areas: 
-            "historia ads"
-            "historia ads"
+            "historia img"
+            "historia img"
             "medidas medidas";
             gap: 20px;
 }
@@ -20,12 +19,13 @@
         font-family: $textos;
     }
 }
- aside{
-    grid-area: ads;
-    width: 60%;
-    .imagen{
-        width: 100% ;
-        height: auto;
+ div{
+    width: 100%;
+    margin: 0 auto;
+    grid-area: img;
+    .imgen {
+    width: 100%;
+    height: auto;
     }
 }
 .medidas{
@@ -48,18 +48,16 @@
 @media screen and (max-width:1024px) {
         .infoHistoria{
             grid-template-columns: repeat(1,1fr);
-            grid-template-rows: repeat(3,1fr);
             grid-template-areas: 
             "historia"
-            "ads"
+            "img"
             "medidas";
         }
-        aside{
-            width: 100%;
+        div{
             justify-content: center;
             align-items: center;
             .imagen{
-                width: 50%;
+                width: 80%;
             }
 
         }

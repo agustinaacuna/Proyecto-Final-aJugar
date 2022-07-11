@@ -1,13 +1,11 @@
 body{
-    height: map-get($body , alto );
-    width: map-get($body , ancho );
     background-color: nth($colores, 1 );
     background-image: url(/img/FondoSitioNuevo.png);
     background-repeat: repeat;
     background-position:center;
     background-size: cover;
     font-family: $textos;
-    text-align: map-get($body , texto );
+    text-align: center;
     nav{
         color: nth($colores, 5 );
         background-color:#dec0e1b2 ;
@@ -60,7 +58,4 @@ body{
     div{
         margin: none;
     }
-}
-@media screen and (max-width: 768px) {
-
 }
